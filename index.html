@@ -286,11 +286,11 @@
         .card:hover .icon-circle { transform: rotate(10deg) scale(1.1); }
 
         /* --- 9. FORMATS (PRICING) --- */
-        .formats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 30px; }
+        .formats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 30px; }
 
         .pricing-card {
-            display: flex; flex-direction: column; align-items: center; text-align: center; justify-content: space-between; height: 100%; padding: 2.5rem 2rem; position: relative; 
-            border: 1px solid rgba(255,255,255,0.05); overflow: visible !important; 
+            display: flex; flex-direction: column; align-items: center; text-align: center; justify-content: space-between; height: 100%; padding: 2.5rem; position: relative;
+            border: 1px solid rgba(255,255,255,0.05); overflow: visible !important;
         }
         
         .pricing-card.featured {
@@ -300,7 +300,7 @@
             z-index: 2; transition: all 0.4s ease;
         }
         .pricing-card.featured:hover {
-            box-shadow: 0 0 50px rgba(204, 255, 0, 0.15); transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 0 50px rgba(204, 255, 0, 0.15); transform: translateY(-8px);
         }
         @media (max-width: 900px) { .pricing-card.featured:hover { transform: translateY(-8px); } }
 
@@ -328,11 +328,11 @@
             content: '✓'; position: absolute; left: 0; width: 20px; height: 20px; color: var(--primary); font-weight: 900; font-size: 1.2rem; line-height: 1; text-shadow: 0 0 10px var(--primary);
         }
 
-        @media (min-width: 901px) { .pricing-card.featured { transform: scale(1.05); } }
+        @media (min-width: 901px) { .pricing-card.featured { } }
 
         /* --- 10. REVIEWS (DARK) --- */
         .review-card {
-            background: var(--bg-card); padding: 2rem; border-radius: 32px; display: flex; flex-direction: column; height: 100%; border: 1px solid rgba(255,255,255,0.05); box-shadow: var(--shadow-soft); transition: all 0.4s ease;
+            background: var(--bg-card); padding: 2.5rem; border-radius: 32px; display: flex; flex-direction: column; height: 100%; border: 1px solid rgba(255,255,255,0.05); box-shadow: var(--shadow-soft); transition: all 0.4s ease;
         }
         .review-card:hover { transform: translateY(-8px); border-color: rgba(255,255,255,0.2); }
         
@@ -588,10 +588,10 @@
         </section>
 
         <!-- 5. FORMATS (PRICING) -->
-        <section id="formats" class="section-padding text-center">
-            <h2 class="section-title reveal" style="margin-bottom: 0.5rem;">Стоимость занятий</h2>
-            <p class="section-subtitle reveal" style="transition-delay: 0.1s;">Инвестиция в будущее вашего ребенка</p>
-            
+        <section id="formats" class="section-padding">
+            <h2 class="section-title reveal" style="margin-bottom: 0.5rem; text-align: center;">Стоимость занятий</h2>
+            <p class="section-subtitle reveal" style="transition-delay: 0.1s; text-align: center;">Инвестиция в будущее вашего ребенка</p>
+
             <div class="formats-grid">
                 
                 <!-- Карточка 1 -->
