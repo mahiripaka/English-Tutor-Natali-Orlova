@@ -179,15 +179,30 @@
         .burger.active span:nth-child(2) { opacity: 0; }
         .burger.active span:nth-child(3) { transform: rotate(-45deg); top: 9px; }
 
+        /* Focus state for burger (Tab navigation) */
+        .burger:focus { outline: none; }
+        .burger:focus span { background-color: var(--primary); }
+
         .mobile-menu-overlay {
             position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: var(--bg-body); z-index: 1001; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 2rem; transform: translateY(-100%); transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
         }
         .mobile-menu-overlay.active { transform: translateY(0); }
-        .mobile-menu-overlay a { font-size: 1.8rem; font-weight: 700; color: var(--text-main); font-family: 'Outfit', sans-serif; }
+        .mobile-menu-overlay a { font-size: 1.8rem; font-weight: 700; color: var(--text-main); font-family: 'Outfit', sans-serif; transition: color 0.3s; }
+        
+        /* Focus state for mobile links (Tab navigation) */
+        .mobile-menu-overlay a:focus { color: var(--primary); outline: none; }
         
         /* Исправление цвета кнопки в мобильном меню */
         .mobile-menu-overlay .btn-primary {
             color: var(--text-dark);
+        }
+
+        /* Особый стиль фокуса для кнопки "Связаться" в бургере:
+           черный текст и внешнее свечение */
+        .mobile-menu-overlay .btn-primary:focus {
+            color: var(--text-dark); /* Текст остается черным */
+            box-shadow: 0 0 30px rgba(204, 255, 0, 0.5); /* Свечение как у кнопки меню */
+            background-color: var(--primary);
         }
 
         /* --- 5. HERO SECTION --- */
@@ -357,6 +372,55 @@
         .user-info h4 { font-size: 1rem; font-weight: 700; margin: 0; line-height: 1.2; color: var(--text-main); }
         .user-info span { font-size: 0.85rem; color: var(--text-muted); }
 
+        /* --- 11. FAQ ACCORDION --- */
+        .faq-item {
+            background: var(--bg-card);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 20px;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+        .faq-item:hover { border-color: rgba(255,255,255,0.2); }
+        .faq-item[open] { border-color: var(--primary); box-shadow: 0 0 20px rgba(204, 255, 0, 0.05); }
+        
+        .faq-summary {
+            padding: 1.5rem;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--text-main);
+        }
+        .faq-summary::-webkit-details-marker { display: none; }
+        .faq-summary:focus { outline: none; }
+        
+        .faq-summary::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary);
+            font-weight: 400;
+            transition: transform 0.3s;
+            line-height: 1;
+        }
+        details[open] .faq-summary::after { transform: rotate(45deg); }
+        
+        .faq-content {
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            font-size: 1rem;
+            animation: slideDown 0.3s ease-out;
+            border-top: 1px solid rgba(255,255,255,0.02);
+        }
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         /* Contact & Footer */
         .contact-wrapper { 
             /* Same dark gradient as Hero + Noise */
@@ -440,6 +504,7 @@
             <a href="#reviews">Отзывы</a>
             <a href="#formats">Цены</a>
             <a href="#contacts">Контакты</a>
+            <a href="#faq">FAQ</a>
         </div>
 
         <div class="nav-cta-wrapper">
@@ -448,7 +513,7 @@
             </a>
         </div>
 
-        <div class="burger" id="burgerBtn">
+        <div class="burger" id="burgerBtn" tabindex="0">
             <span></span><span></span><span></span>
         </div>
     </nav>
@@ -458,8 +523,9 @@
         <a href="#about" class="mobile-link">Обо мне</a>
         <a href="#methodology" class="mobile-link">Методика</a>
         <a href="#reviews" class="mobile-link">Отзывы</a>
-        <a href="#formats" class="mobile-link">Обучение</a>
+        <a href="#formats" class="mobile-link">Цены</a>
         <a href="#contacts" class="mobile-link">Контакты</a>
+        <a href="#faq" class="mobile-link">FAQ</a>
         <a href="#contact" class="btn btn-primary mobile-link" style="font-size: 1.2rem;">Связаться</a>
     </div>
 
@@ -730,6 +796,34 @@
             </div>
         </section>
 
+        <!-- 8. FAQ -->
+        <section id="faq" class="section-padding">
+            <h2 class="section-title reveal text-center" style="margin-bottom: 3rem;">Частые вопросы</h2>
+            <div class="reveal" style="max-width: 800px; margin: 0 auto;">
+                <!-- Item 1 -->
+                <details class="faq-item">
+                    <summary class="faq-summary">На какой платформе проходят уроки?</summary>
+                    <div class="faq-content">
+                        Мы созваниваемся в Zoom или Google Meet. Все материалы, доски и упражнения находятся на интерактивной платформе (Miro/Edvibe), доступ к которой вы получаете бесплатно.
+                    </div>
+                </details>
+                <!-- Item 2 -->
+                <details class="faq-item">
+                    <summary class="faq-summary">Можно ли перенести занятие?</summary>
+                    <div class="faq-content">
+                        Да, перенос возможен не позднее чем за 24 часа до начала урока. Мы ценим время друг друга.
+                    </div>
+                </details>
+                <!-- Item 3 -->
+                <details class="faq-item">
+                    <summary class="faq-summary">Вы готовите только к ЕГЭ?</summary>
+                    <div class="faq-content">
+                        Основной профиль — ОГЭ и ЕГЭ, но я также помогаю повысить школьную успеваемость (7-10 классы) и готовлю к международным экзаменам начальных уровней.
+                    </div>
+                </details>
+            </div>
+        </section>
+
     </div>
 
     <!-- FOOTER -->
@@ -743,7 +837,7 @@
             </div>
             <div class="footer-col">
                 <h5>Навигация</h5>
-                <a href="#">Домой</a><a href="#about">Обо мне</a><a href="#reviews">Отзывы</a>
+                <a href="#">Домой</a><a href="#about">Обо мне</a><a href="#reviews">Отзывы</a><a href="#faq">FAQ</a>
             </div>
             <div class="footer-col">
                 <h5>Соцсети</h5>
@@ -770,6 +864,37 @@
                 burgerBtn.classList.remove('active');
                 mobileMenu.classList.remove('active');
             });
+        });
+
+        // Зацикливание фокуса в мобильном меню
+        document.addEventListener('keydown', function(e) {
+            // Если меню не открыто, выходим
+            if (!mobileMenu.classList.contains('active')) return;
+            
+            // Если нажата клавиша Tab
+            if (e.key === 'Tab') {
+                const links = Array.from(mobileMenu.querySelectorAll('a'));
+                const firstElement = burgerBtn;
+                const lastElement = links[links.length - 1];
+                
+                if (e.shiftKey) { /* Shift + Tab (назад) */
+                    if (document.activeElement === firstElement) {
+                        e.preventDefault();
+                        lastElement.focus();
+                    } else if (document.activeElement === links[0]) {
+                        e.preventDefault();
+                        firstElement.focus();
+                    }
+                } else { /* Tab (вперед) */
+                    if (document.activeElement === lastElement) {
+                        e.preventDefault();
+                        firstElement.focus();
+                    } else if (document.activeElement === firstElement) {
+                        e.preventDefault();
+                        links[0].focus();
+                    }
+                }
+            }
         });
 
         // Анимация при скролле (Scroll Reveal)
