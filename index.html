@@ -492,20 +492,20 @@
 <body>
 
     <!-- Навигация -->
-    <nav class="navbar">
+    <header class="navbar">
         <a href="#" class="logo">
             <div class="logo-dot"></div>
             NataliTutor
         </a>
         
-        <div class="nav-menu">
+        <nav class="nav-menu">
             <a href="#about">Обо мне</a>
             <a href="#methodology">Методика</a>
             <a href="#reviews">Отзывы</a>
             <a href="#formats">Цены</a>
-            <a href="#contacts">Контакты</a>
+            <a href="#contact">Контакты</a>
             <a href="#faq">FAQ</a>
-        </div>
+        </nav>
 
         <div class="nav-cta-wrapper">
             <a href="#contact" class="btn btn-primary" style="padding: 0.7rem 1.8rem; font-size: 0.95rem;">
@@ -516,7 +516,7 @@
         <div class="burger" id="burgerBtn" tabindex="0">
             <span></span><span></span><span></span>
         </div>
-    </nav>
+    </header>
 
     <!-- Мобильное Меню -->
     <div class="mobile-menu-overlay" id="mobileMenu">
@@ -524,307 +524,309 @@
         <a href="#methodology" class="mobile-link">Методика</a>
         <a href="#reviews" class="mobile-link">Отзывы</a>
         <a href="#formats" class="mobile-link">Цены</a>
-        <a href="#contacts" class="mobile-link">Контакты</a>
+        <a href="#contact" class="mobile-link">Контакты</a>
         <a href="#faq" class="mobile-link">FAQ</a>
         <a href="#contact" class="btn btn-primary mobile-link" style="font-size: 1.2rem;">Связаться</a>
     </div>
 
-    <div class="container">
+    <main>
+        <div class="container">
 
-        <!-- 1. HERO -->
-        <section class="hero-section">
-            <div class="hero-grid">
-                <div class="card hero-text-card reveal">
-                    <h1 class="hero-title"><span class="gradient-text">Английский легко</span><br>с репетитором<br>Натальей Орловой</h1>
-                    <p class="hero-subtitle">
-                        Персональные и групповые занятия. Подготовка к ЕГЭ/ОГЭ и международным экзаменам начального уровня
-                    </p>
-                    <a href="#contact" class="btn btn-white" style="align-self: center; color: #000;">Пробный урок</a>
+            <!-- 1. HERO -->
+            <section class="hero-section">
+                <div class="hero-grid">
+                    <div class="card hero-text-card reveal">
+                        <h1 class="hero-title"><span class="gradient-text">Английский легко</span><br>с репетитором<br>Натальей Орловой</h1>
+                        <p class="hero-subtitle">
+                            Персональные и групповые занятия. Подготовка к ЕГЭ/ОГЭ и международным экзаменам начального уровня
+                        </p>
+                        <a href="#contact" class="btn btn-white" style="align-self: center; color: #000;">Пробный урок</a>
+                    </div>
+                    <div class="card hero-image-card reveal" style="transition-delay: 0.1s;">
+                        <img src="img/students1.jpg" class="floating" alt="Наталья Орлова - занятие с учениками" width="600" height="600" loading="eager" fetchpriority="high">
+                    </div>
                 </div>
-                <div class="card hero-image-card reveal" style="transition-delay: 0.1s;">
-                    <img src="img/students1.jpg" class="floating" alt="Наталья Орлова - занятие с учениками" width="600" height="600" loading="eager" fetchpriority="high">
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- 2. STATS -->
-        <section class="reveal">
-            <div class="stats-card-container">
-                <div class="stat-item">
-                    <span class="stat-num">300+</span>
-                    <span class="stat-desc">Довольных учеников<br>уже сдали экзамены</span>
+            <!-- 2. STATS -->
+            <section class="reveal">
+                <div class="stats-card-container">
+                    <div class="stat-item">
+                        <span class="stat-num">300+</span>
+                        <span class="stat-desc">Довольных учеников<br>уже сдали экзамены</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">6+</span>
+                        <span class="stat-desc">Лет практики<br>и преподавания</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">85+</span>
+                        <span class="stat-desc">Средний балл ЕГЭ</span>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-num">6+</span>
-                    <span class="stat-desc">Лет практики<br>и преподавания</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-num">100%</span>
-                    <span class="stat-desc">Удовольствия<br>от процесса обучения</span>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- 3. ABOUT -->
-        <section id="about" class="section-padding">
-            <div class="about-grid">
-                
-                <!-- Контент справа -->
-                <div class="reveal">
-                    <span class="about-label">Обо мне</span>
-                    <h2 class="about-title">Не просто репетитор, а наставник</h2>
-                    <p class="about-desc">
-                        Меня зовут Наталья. Я — бывший классный руководитель, который знает все "боли" школьной программы изнутри. Сейчас я помогаю подросткам не только сдавать экзамены, но и верить в себя.
-                    </p>
+            <!-- 3. ABOUT -->
+            <section id="about" class="section-padding">
+                <div class="about-grid">
                     
-                    <!-- Плашки преимуществ -->
-                    <div class="about-features">
-                        <div class="about-feature-card">
-                            <div class="feature-icon-wrapper">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="currentColor" fill-opacity="0.2"/><path d="M7 12L10.5 15.5L17 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                            </div>
-                            <span class="feature-text">Знаю все ловушки ФИПИ и школьных учебников</span>
-                        </div>
-
-                        <div class="about-feature-card">
-                            <div class="feature-icon-wrapper">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="currentColor" fill-opacity="0.2"/><path d="M12 7.69431C10 5 7 5.5 7 9C7 13 12 16 12 16C12 16 17 13 17 9C17 5.5 14 5 12 7.69431Z" fill="currentColor"/></svg>
-                            </div>
-                            <span class="feature-text">Строгость там, где нужно, и поддержка всегда</span>
-                        </div>
-
-                        <div class="about-feature-card">
-                            <div class="feature-icon-wrapper">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="currentColor" fill-opacity="0.2"/><path d="M12 16C12 16 16 13 16 10C16 7.79086 14.2091 6 12 6C9.79086 6 8 7.79086 8 10C8 13 12 16 12 16Z" fill="currentColor"/><circle cx="12" cy="10" r="1" fill="white"/><circle cx="10" cy="10" r="1" fill="white"/><circle cx="14" cy="10" r="1" fill="white"/></svg>
-                            </div>
-                            <span class="feature-text">Учу говорить, а не только решать тесты</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Фото слева -->
-                <div class="about-photo reveal" style="transition-delay: 0.2s;">
-                    <img src="img/teacher1.jpg" alt="Наталья Орлова" width="500" height="700" loading="lazy">
-                </div>
-            </div>
-        </section>
-
-        <!-- 4. METHODOLOGY -->
-        <section id="methodology" class="section-padding text-center">
-            <h2 class="section-title reveal">Как проходят уроки</h2>
-            <p class="reveal" style="color: var(--text-muted); margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto; font-size: 1.1rem;">
-                Баланс академических знаний и увлекательного интерактива
-            </p>
-
-            <div class="methodology-grid">
-                <div class="card reveal">
-                    <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-                        <div class="icon-circle floating">
-                            <!-- SVG Gamepad (Line Art) -->
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="2" y="6" width="20" height="12" rx="2" />
-                                <path d="M6 12h4m-2-2v4" />
-                                <line x1="15" y1="11" x2="15.01" y2="11" />
-                                <line x1="18" y1="13" x2="18.01" y2="13" />
-                            </svg>
-                        </div>
-                        <h3 style="margin-bottom: 1rem; font-weight: 700; font-size: 1.4rem;">Геймификация</h3>
-                        <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.5;">Используем Kahoot, Quizlet и Miro. Заучивание слов превращается в соревнование.</p>
-                    </div>
-                </div>
-                <div class="card reveal" style="transition-delay: 0.1s;">
-                    <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-                        <div class="icon-circle floating" style="animation-delay: 1s;">
-                             <!-- SVG Monitor (Line Art) -->
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                                <line x1="8" y1="21" x2="16" y2="21"></line>
-                                <line x1="12" y1="17" x2="12" y2="21"></line>
-                            </svg>
-                        </div>
-                        <h3 style="margin-bottom: 1rem; font-weight: 700; font-size: 1.4rem;">Живой язык</h3>
-                        <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.5;">Разбираем мемы и актуальные статьи. Английский, на котором реально говорят.</p>
-                    </div>
-                </div>
-                <div class="card reveal" style="transition-delay: 0.2s;">
-                    <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-                        <div class="icon-circle floating" style="animation-delay: 2s;">
-                             <!-- SVG Graduation Cap (Line Art) -->
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
-                                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
-                            </svg>
-                        </div>
-                        <h3 style="margin-bottom: 1rem; font-weight: 700; font-size: 1.4rem;">Системность</h3>
-                        <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.5;">Четкий план подготовки к ОГЭ/ЕГЭ. Регулярные "пробники", отслеживание прогресса.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 5. FORMATS (PRICING) -->
-        <section id="formats" class="section-padding">
-            <h2 class="section-title reveal" style="margin-bottom: 0.5rem; text-align: center;">Стоимость занятий</h2>
-            <p class="section-subtitle reveal" style="transition-delay: 0.1s; text-align: center;">Инвестиция в будущее вашего ребенка</p>
-
-            <div class="formats-grid">
-                
-                <!-- Карточка 1 -->
-                <div class="card pricing-card reveal">
-                    <div>
-                        <h3 class="pricing-title">В парах (2 чел)</h3>
-                        <p class="pricing-subtitle">Веселее и дешевле</p>
-                        <div class="pricing-amount">1500₽ <span>/ урок</span></div>
-                        <ul class="pricing-check-list">
-                            <li>60 минут</li>
-                            <li>Здоровая конкуренция</li>
-                            <li>Проверка ДЗ</li>
-                        </ul>
-                    </div>
-                    <a href="#contact" class="btn btn-outline" style="width:100%;">Выбрать</a>
-                </div>
-
-                <!-- Карточка 2 -->
-                <div class="card pricing-card featured reveal" style="transition-delay: 0.1s;">
-                    <div class="badge-top-center">POPULAR</div>
-                    <div>
-                        <h3 class="pricing-title">Личное наставничество</h3>
-                        <p class="pricing-subtitle">Максимальный фокус</p>
-                        <div class="pricing-amount">2500₽ <span>/ урок</span></div>
-                        <ul class="pricing-check-list">
-                            <li>60 минут</li>
-                            <li>Персональный трек</li>
-                            <li>Связь 24/7 в Telegram</li>
-                            <li>Отчеты родителям</li>
-                        </ul>
-                    </div>
-                    <a href="#contact" class="btn btn-primary" style="width:100%;">Записаться</a>
-                </div>
-
-                <!-- Карточка 3 -->
-                <div class="card pricing-card reveal" style="transition-delay: 0.2s;">
-                    <div>
-                        <h3 class="pricing-title">Курс "Интенсив ЕГЭ"</h3>
-                        <p class="pricing-subtitle">За 3 месяца до экзамена</p>
-                        <div class="pricing-amount">25К <span>/ курс</span></div>
-                        <ul class="pricing-check-list">
-                            <li>24 занятия в группе</li>
-                            <li>4 пробника с проверкой</li>
-                            <li>Вебинары с психологом</li>
-                        </ul>
-                    </div>
-                    <a href="#contact" class="btn btn-outline" style="width:100%;">Узнать даты</a>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- 6. REVIEWS -->
-        <section id="reviews" class="section-padding text-center" style="padding-top:0;">
-             <h2 class="section-title reveal" style="margin-bottom: 0.5rem;">Отзывы</h2>
-             <p class="section-subtitle reveal" style="transition-delay: 0.1s;">Что говорят родители и ученики</p>
-             
-             <div class="benefits-grid" style="text-align: left; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
-                
-                <!-- Review 1 -->
-                <div class="review-card reveal">
-                    <div class="review-quote-box">
-                        "Сын перестал бояться уроков английского в школе. Раньше была тройка с натяжкой, сейчас уверенная 4, и готовится к ОГЭ с интересом."
-                    </div>
-                    <div class="review-footer">
-                        <img src="img/user1.jpg" class="user-avatar" alt="Марина В." width="100" height="100" loading="lazy">
-                        <div class="user-info">
-                            <h4>Марина В.</h4>
-                            <span>Мама ученика</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Review 2 -->
-                <div class="review-card reveal" style="transition-delay: 0.1s;">
-                    <div class="review-quote-box">
-                        "Занятия проходят незаметно. Мы разбираем мои любимые песни, и я наконец-то понял времена! На пробнике набрал 80 баллов."
-                    </div>
-                    <div class="review-footer">
-                        <img src="img/user2.jpg" class="user-avatar" alt="Артём" width="100" height="100" loading="lazy">
-                        <div class="user-info">
-                            <h4>Артём</h4>
-                            <span>11 класс</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Review 3 -->
-                <div class="review-card reveal" style="transition-delay: 0.2s;">
-                    <div class="review-quote-box">
-                        "Очень структурированная подача. Наталья требовательная, но добрая. Всегда объяснит, если непонятно, хоть 10 раз."
-                    </div>
-                    <div class="review-footer">
-                        <img src="img/user3.jpg" class="user-avatar" alt="Елена П." width="100" height="100" loading="lazy">
-                        <div class="user-info">
-                            <h4>Елена П.</h4>
-                            <span>Мама</span>
-                        </div>
-                    </div>
-                </div>
-
-             </div>
-        </section>
-
-        <!-- 7. CONTACT -->
-        <section id="contact" class="section-padding">
-            <div class="contact-wrapper reveal">
-                <div>
-                    <h2 style="font-size: 2.5rem; line-height: 1.1; margin-bottom: 1.5rem; color: #FFFFFF;">
-                        Прокачай свой <span class="gradient-text">English</span><br>до уровня <span class="gradient-text">Pro</span>
-                    </h2>
-                    <p style="font-size:1.15rem; color: #D4D4D8;">
-                        Оставь заявку на бесплатный пробный урок. Определим твой уровень и составим план победы.
-                    </p>
-                </div>
-                <div class="contact-form">
-                    <form onsubmit="event.preventDefault(); alert('Спасибо! Ваша заявка отправлена.');">
-                        <label style="display:block; margin-bottom: 0.5rem; font-weight:600; font-size:0.9rem; color: #D4D4D8;">Ваше имя</label>
-                        <input type="text" class="form-input" placeholder="Например, Иван">
+                    <!-- Контент справа -->
+                    <div class="reveal">
+                        <span class="about-label">Обо мне</span>
+                        <h2 class="about-title">Не просто репетитор, а наставник</h2>
+                        <p class="about-desc">
+                            Меня зовут Наталья. Я — бывший классный руководитель, который знает все "боли" школьной программы изнутри. Сейчас я помогаю подросткам не только сдавать экзамены, но и верить в себя.
+                        </p>
                         
-                        <label style="display:block; margin-bottom: 0.5rem; font-weight:600; font-size:0.9rem; color: #D4D4D8;">Телефон или Telegram</label>
-                        <input type="text" class="form-input" placeholder="+7 (999) 000-00-00">
-                        
-                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">Отправить заявку</button>
-                    </form>
+                        <!-- Плашки преимуществ -->
+                        <div class="about-features">
+                            <div class="about-feature-card">
+                                <div class="feature-icon-wrapper">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="currentColor" fill-opacity="0.2"/><path d="M7 12L10.5 15.5L17 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </div>
+                                <span class="feature-text">Знаю все ловушки ФИПИ и школьных учебников</span>
+                            </div>
+
+                            <div class="about-feature-card">
+                                <div class="feature-icon-wrapper">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="currentColor" fill-opacity="0.2"/><path d="M12 7.69431C10 5 7 5.5 7 9C7 13 12 16 12 16C12 16 17 13 17 9C17 5.5 14 5 12 7.69431Z" fill="currentColor"/></svg>
+                                </div>
+                                <span class="feature-text">Строгость там, где нужно, и поддержка всегда</span>
+                            </div>
+
+                            <div class="about-feature-card">
+                                <div class="feature-icon-wrapper">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="currentColor" fill-opacity="0.2"/><path d="M12 16C12 16 16 13 16 10C16 7.79086 14.2091 6 12 6C9.79086 6 8 7.79086 8 10C8 13 12 16 12 16Z" fill="currentColor"/><circle cx="12" cy="10" r="1" fill="white"/><circle cx="10" cy="10" r="1" fill="white"/><circle cx="14" cy="10" r="1" fill="white"/></svg>
+                                </div>
+                                <span class="feature-text">Учу говорить, а не только решать тесты</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фото слева -->
+                    <div class="about-photo reveal" style="transition-delay: 0.2s;">
+                        <img src="img/teacher1.jpg" alt="Наталья Орлова" width="500" height="700" loading="lazy">
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- 8. FAQ -->
-        <section id="faq" class="section-padding">
-            <h2 class="section-title reveal text-center" style="margin-bottom: 3rem;">Частые вопросы</h2>
-            <div class="reveal" style="max-width: 800px; margin: 0 auto;">
-                <!-- Item 1 -->
-                <details class="faq-item">
-                    <summary class="faq-summary">На какой платформе проходят уроки?</summary>
-                    <div class="faq-content">
-                        Мы созваниваемся в Zoom или Google Meet. Все материалы, доски и упражнения находятся на интерактивной платформе (Miro/Edvibe), доступ к которой вы получаете бесплатно.
-                    </div>
-                </details>
-                <!-- Item 2 -->
-                <details class="faq-item">
-                    <summary class="faq-summary">Можно ли перенести занятие?</summary>
-                    <div class="faq-content">
-                        Да, перенос возможен не позднее чем за 24 часа до начала урока. Мы ценим время друг друга.
-                    </div>
-                </details>
-                <!-- Item 3 -->
-                <details class="faq-item">
-                    <summary class="faq-summary">Вы готовите только к ЕГЭ?</summary>
-                    <div class="faq-content">
-                        Основной профиль — ОГЭ и ЕГЭ, но я также помогаю повысить школьную успеваемость (7-10 классы) и готовлю к международным экзаменам начальных уровней.
-                    </div>
-                </details>
-            </div>
-        </section>
+            <!-- 4. METHODOLOGY -->
+            <section id="methodology" class="section-padding text-center">
+                <h2 class="section-title reveal">Как проходят уроки</h2>
+                <p class="reveal" style="color: var(--text-muted); margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto; font-size: 1.1rem;">
+                    Баланс академических знаний и увлекательного интерактива
+                </p>
 
-    </div>
+                <div class="methodology-grid">
+                    <div class="card reveal">
+                        <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                            <div class="icon-circle floating">
+                                <!-- SVG Gamepad (Line Art) -->
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="6" width="20" height="12" rx="2" />
+                                    <path d="M6 12h4m-2-2v4" />
+                                    <line x1="15" y1="11" x2="15.01" y2="11" />
+                                    <line x1="18" y1="13" x2="18.01" y2="13" />
+                                </svg>
+                            </div>
+                            <h3 style="margin-bottom: 1rem; font-weight: 700; font-size: 1.4rem;">Геймификация</h3>
+                            <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.5;">Используем Kahoot, Quizlet и Miro. Заучивание слов превращается в соревнование.</p>
+                        </div>
+                    </div>
+                    <div class="card reveal" style="transition-delay: 0.1s;">
+                        <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                            <div class="icon-circle floating" style="animation-delay: 1s;">
+                                 <!-- SVG Monitor (Line Art) -->
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                                </svg>
+                            </div>
+                            <h3 style="margin-bottom: 1rem; font-weight: 700; font-size: 1.4rem;">Живой язык</h3>
+                            <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.5;">Разбираем мемы и актуальные статьи. Английский, на котором реально говорят.</p>
+                        </div>
+                    </div>
+                    <div class="card reveal" style="transition-delay: 0.2s;">
+                        <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                            <div class="icon-circle floating" style="animation-delay: 2s;">
+                                 <!-- SVG Graduation Cap (Line Art) -->
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                                </svg>
+                            </div>
+                            <h3 style="margin-bottom: 1rem; font-weight: 700; font-size: 1.4rem;">Системность</h3>
+                            <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.5;">Четкий план подготовки к ОГЭ/ЕГЭ. Регулярные "пробники", отслеживание прогресса.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. FORMATS (PRICING) -->
+            <section id="formats" class="section-padding">
+                <h2 class="section-title reveal" style="margin-bottom: 0.5rem; text-align: center;">Стоимость занятий</h2>
+                <p class="section-subtitle reveal" style="transition-delay: 0.1s; text-align: center;">Инвестиция в будущее вашего ребенка</p>
+
+                <div class="formats-grid">
+                    
+                    <!-- Карточка 1 -->
+                    <div class="card pricing-card reveal">
+                        <div>
+                            <h3 class="pricing-title">В парах (2 чел)</h3>
+                            <p class="pricing-subtitle">Веселее и дешевле</p>
+                            <div class="pricing-amount">1500₽ <span>/ урок</span></div>
+                            <ul class="pricing-check-list">
+                                <li>60 минут</li>
+                                <li>Здоровая конкуренция</li>
+                                <li>Проверка ДЗ</li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="btn btn-outline" style="width:100%;">Выбрать</a>
+                    </div>
+
+                    <!-- Карточка 2 -->
+                    <div class="card pricing-card featured reveal" style="transition-delay: 0.1s;">
+                        <div class="badge-top-center">POPULAR</div>
+                        <div>
+                            <h3 class="pricing-title">Личное наставничество</h3>
+                            <p class="pricing-subtitle">Максимальный фокус</p>
+                            <div class="pricing-amount">2500₽ <span>/ урок</span></div>
+                            <ul class="pricing-check-list">
+                                <li>60 минут</li>
+                                <li>Персональный трек</li>
+                                <li>Связь 24/7 в Telegram</li>
+                                <li>Отчеты родителям</li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="btn btn-primary" style="width:100%;">Записаться</a>
+                    </div>
+
+                    <!-- Карточка 3 -->
+                    <div class="card pricing-card reveal" style="transition-delay: 0.2s;">
+                        <div>
+                            <h3 class="pricing-title">Курс "Интенсив ЕГЭ"</h3>
+                            <p class="pricing-subtitle">За 3 месяца до экзамена</p>
+                            <div class="pricing-amount">25К <span>/ курс</span></div>
+                            <ul class="pricing-check-list">
+                                <li>24 занятия в группе</li>
+                                <li>4 пробника с проверкой</li>
+                                <li>Вебинары с психологом</li>
+                            </ul>
+                        </div>
+                        <a href="#contact" class="btn btn-outline" style="width:100%;">Узнать даты</a>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- 6. REVIEWS -->
+            <section id="reviews" class="section-padding text-center" style="padding-top:0;">
+                 <h2 class="section-title reveal" style="margin-bottom: 0.5rem;">Отзывы</h2>
+                 <p class="section-subtitle reveal" style="transition-delay: 0.1s;">Что говорят родители и ученики</p>
+                 
+                 <div class="benefits-grid" style="text-align: left; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                    
+                    <!-- Review 1 -->
+                    <div class="review-card reveal">
+                        <div class="review-quote-box">
+                            "Сын перестал бояться уроков английского в школе. Раньше была тройка с натяжкой, сейчас уверенная 4, и готовится к ОГЭ с интересом."
+                        </div>
+                        <div class="review-footer">
+                            <img src="img/user1.jpg" class="user-avatar" alt="Марина В." width="100" height="100" loading="lazy">
+                            <div class="user-info">
+                                <h4>Марина В.</h4>
+                                <span>Мама ученика</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="review-card reveal" style="transition-delay: 0.1s;">
+                        <div class="review-quote-box">
+                            "Занятия проходят незаметно. Мы разбираем мои любимые песни, и я наконец-то понял времена! На пробнике набрал 80 баллов."
+                        </div>
+                        <div class="review-footer">
+                            <img src="img/user2.jpg" class="user-avatar" alt="Артём" width="100" height="100" loading="lazy">
+                            <div class="user-info">
+                                <h4>Артём</h4>
+                                <span>11 класс</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="review-card reveal" style="transition-delay: 0.2s;">
+                        <div class="review-quote-box">
+                            "Очень структурированная подача. Наталья требовательная, но добрая. Всегда объяснит, если непонятно, хоть 10 раз."
+                        </div>
+                        <div class="review-footer">
+                            <img src="img/user3.jpg" class="user-avatar" alt="Елена П." width="100" height="100" loading="lazy">
+                            <div class="user-info">
+                                <h4>Елена П.</h4>
+                                <span>Мама</span>
+                            </div>
+                        </div>
+                    </div>
+
+                 </div>
+            </section>
+
+            <!-- 7. CONTACT -->
+            <section id="contact" class="section-padding">
+                <div class="contact-wrapper reveal">
+                    <div>
+                        <h2 style="font-size: 2.5rem; line-height: 1.1; margin-bottom: 1.5rem; color: #FFFFFF;">
+                            Прокачай свой <span class="gradient-text">English</span><br>до уровня <span class="gradient-text">Pro</span>
+                        </h2>
+                        <p style="font-size:1.15rem; color: #D4D4D8;">
+                            Оставь заявку на бесплатный пробный урок. Определим твой уровень и составим план победы.
+                        </p>
+                    </div>
+                    <div class="contact-form">
+                        <form id="telegramForm">
+                            <label style="display:block; margin-bottom: 0.5rem; font-weight:600; font-size:0.9rem; color: #D4D4D8;">Ваше имя</label>
+                            <input type="text" name="name" class="form-input" placeholder="Например, Иван" required>
+                            
+                            <label style="display:block; margin-bottom: 0.5rem; font-weight:600; font-size:0.9rem; color: #D4D4D8;">Телефон или Telegram</label>
+                            <input type="text" name="phone" class="form-input" placeholder="+7 (999) 000-00-00" required>
+                            
+                            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">Отправить заявку</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. FAQ -->
+            <section id="faq" class="section-padding">
+                <h2 class="section-title reveal text-center" style="margin-bottom: 3rem;">Частые вопросы</h2>
+                <div class="reveal" style="max-width: 800px; margin: 0 auto;">
+                    <!-- Item 1 -->
+                    <details class="faq-item">
+                        <summary class="faq-summary">На какой платформе проходят уроки?</summary>
+                        <div class="faq-content">
+                            Мы созваниваемся в Zoom или Google Meet. Все материалы, доски и упражнения находятся на интерактивной платформе (Miro/Edvibe), доступ к которой вы получаете бесплатно.
+                        </div>
+                    </details>
+                    <!-- Item 2 -->
+                    <details class="faq-item">
+                        <summary class="faq-summary">Можно ли перенести занятие?</summary>
+                        <div class="faq-content">
+                            Да, перенос возможен не позднее чем за 24 часа до начала урока. Мы ценим время друг друга.
+                        </div>
+                    </details>
+                    <!-- Item 3 -->
+                    <details class="faq-item">
+                        <summary class="faq-summary">Вы готовите только к ЕГЭ?</summary>
+                        <div class="faq-content">
+                            Основной профиль — ОГЭ и ЕГЭ, но я также помогаю повысить школьную успеваемость (7-10 классы) и готовлю к международным экзаменам начальных уровней.
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+        </div>
+    </main>
 
     <!-- FOOTER -->
     <footer id="contacts">
@@ -868,16 +870,12 @@
 
         // Зацикливание фокуса в мобильном меню
         document.addEventListener('keydown', function(e) {
-            // Если меню не открыто, выходим
             if (!mobileMenu.classList.contains('active')) return;
-            
-            // Если нажата клавиша Tab
             if (e.key === 'Tab') {
                 const links = Array.from(mobileMenu.querySelectorAll('a'));
                 const firstElement = burgerBtn;
                 const lastElement = links[links.length - 1];
-                
-                if (e.shiftKey) { /* Shift + Tab (назад) */
+                if (e.shiftKey) {
                     if (document.activeElement === firstElement) {
                         e.preventDefault();
                         lastElement.focus();
@@ -885,7 +883,7 @@
                         e.preventDefault();
                         firstElement.focus();
                     }
-                } else { /* Tab (вперед) */
+                } else {
                     if (document.activeElement === lastElement) {
                         e.preventDefault();
                         firstElement.focus();
@@ -910,8 +908,50 @@
             }
         }
         window.addEventListener("scroll", reveal);
-        // Запустить один раз при загрузке
         reveal();
+
+        // Отправка формы в Telegram
+        document.getElementById('telegramForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // ВСТАВЬТЕ СЮДА ВАШИ ДАННЫЕ
+            const BOT_TOKEN = 'YOUR_BOT_TOKEN_HERE'; 
+            const CHAT_ID = 'YOUR_CHAT_ID_HERE';
+            
+            if (BOT_TOKEN === 'YOUR_BOT_TOKEN_HERE') {
+                alert('Ошибка: Не настроен токен бота Telegram в коде.');
+                return;
+            }
+
+            const name = this.querySelector('input[name="name"]').value;
+            const phone = this.querySelector('input[name="phone"]').value;
+            
+            const message = `<b>Новая заявка с сайта!</b>\n\n👤 Имя: ${name}\n📱 Контакт: ${phone}`;
+            
+            fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    chat_id: CHAT_ID,
+                    text: message,
+                    parse_mode: 'HTML'
+                })
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Спасибо! Ваша заявка успешно отправлена.');
+                    this.reset();
+                } else {
+                    alert('Ошибка при отправке. Попробуйте позже.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Ошибка сети.');
+            });
+        });
     </script>
 </body>
 </html>
