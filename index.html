@@ -449,6 +449,23 @@
             border: 1px solid #333; border-radius: 16px; font-family: inherit; color: var(--text-main); font-size: 1rem; transition: border 0.3s; 
         }
         .form-input:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 10px rgba(204, 255, 0, 0.1); }
+        
+        /* Стили для выпадающего списка Select */
+        select.form-input {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            cursor: pointer;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23CCFF00' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1em;
+        }
+        /* Цвет опций выпадающего списка в темной теме */
+        select.form-input option {
+            background-color: #1a1c22;
+            color: var(--text-main);
+        }
 
         footer { 
             margin-top: 6rem; 
@@ -515,7 +532,7 @@
         </nav>
 
         <div class="nav-cta-wrapper">
-            <a href="#contact" class="btn btn-primary" style="padding: 0.7rem 1.8rem; font-size: 0.95rem;">
+            <a href="#contact" class="btn btn-primary" id="btnNavContact" style="padding: 0.7rem 1.8rem; font-size: 0.95rem;">
                 Связаться
             </a>
         </div>
@@ -532,7 +549,7 @@
         <a href="#reviews" class="mobile-link">Отзывы</a>
         <a href="#formats" class="mobile-link">Цены</a>
         <a href="#faq" class="mobile-link">FAQ</a>
-        <a href="#contact" class="btn btn-primary mobile-link" style="font-size: 1.2rem;">Связаться</a>
+        <a href="#contact" class="btn btn-primary mobile-link" id="btnBurgerContact" style="font-size: 1.2rem;">Связаться</a>
     </div>
 
     <main>
@@ -546,7 +563,7 @@
                         <p class="hero-subtitle">
                             Персональные и групповые занятия. Подготовка к ЕГЭ/ОГЭ и международным экзаменам начального уровня
                         </p>
-                        <a href="#contact" class="btn btn-white" style="align-self: center; color: #000;">Пробный урок</a>
+                        <a href="#contact" class="btn btn-white" id="btnHeroTrial" style="align-self: center; color: #000;">Пробный урок</a>
                     </div>
                     <div class="card hero-image-card reveal" style="transition-delay: 0.1s;">
                         <img src="img/students1.jpg" class="floating" alt="Наталья Орлова - занятие с учениками" width="600" height="600" loading="eager" fetchpriority="high">
@@ -641,7 +658,7 @@
                     <div class="card reveal" style="transition-delay: 0.1s;">
                         <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
                             <div class="icon-circle floating" style="animation-delay: 1s;">
-                                 <!-- SVG Message Circle (Line Art) - REPLACED MONITOR ICON -->
+                                 <!-- SVG Message Circle (Line Art) -->
                                 <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
                                 </svg>
@@ -685,7 +702,7 @@
                                 <li>Проверка ДЗ</li>
                             </ul>
                         </div>
-                        <a href="#contact" class="btn btn-outline" style="width:100%;">Выбрать</a>
+                        <a href="#contact" class="btn btn-outline" id="btnGroup" style="width:100%;">Выбрать</a>
                     </div>
 
                     <!-- Карточка 2 -->
@@ -702,7 +719,7 @@
                                 <li>Отчеты родителям</li>
                             </ul>
                         </div>
-                        <a href="#contact" class="btn btn-primary" style="width:100%;">Записаться</a>
+                        <a href="#contact" class="btn btn-primary" id="btnPersonal" style="width:100%;">Записаться</a>
                     </div>
 
                     <!-- Карточка 3 -->
@@ -717,7 +734,7 @@
                                 <li>Вебинары с психологом</li>
                             </ul>
                         </div>
-                        <a href="#contact" class="btn btn-outline" style="width:100%;">Узнать даты</a>
+                        <a href="#contact" class="btn btn-outline" id="btnIntensive" style="width:100%;">Узнать даты</a>
                     </div>
 
                 </div>
@@ -794,6 +811,14 @@
                             <label style="display:block; margin-bottom: 0.5rem; font-weight:600; font-size:0.9rem; color: #D4D4D8;">Телефон или Telegram</label>
                             <input type="text" name="phone" class="form-input" placeholder="+7 (999) 000-00-00" required>
                             
+                            <label style="display:block; margin-bottom: 0.5rem; font-weight:600; font-size:0.9rem; color: #D4D4D8;">Хочу</label>
+                            <select name="topic" id="topicSelect" class="form-input">
+                                <option value="Пробный урок">Пробный урок</option>
+                                <option value="Занятия в группе (3 - 4 человека)">Занятия в группе (3 - 4 человека)</option>
+                                <option value="Индивидуальные занятия">Индивидуальные занятия</option>
+                                <option value="Интенсив ЕГЭ">Интенсив ЕГЭ</option>
+                            </select>
+
                             <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">Отправить заявку</button>
                         </form>
                     </div>
@@ -899,6 +924,30 @@
         window.addEventListener("scroll", reveal);
         reveal();
 
+        // --- ЛОГИКА ВЫБОРА ТАРИФА ---
+        const topicSelect = document.getElementById('topicSelect');
+
+        // Обработчики для тарифов
+        document.getElementById('btnGroup').addEventListener('click', () => {
+            topicSelect.value = 'Занятия в группе (3 - 4 человека)';
+        });
+        document.getElementById('btnPersonal').addEventListener('click', () => {
+            topicSelect.value = 'Индивидуальные занятия';
+        });
+        document.getElementById('btnIntensive').addEventListener('click', () => {
+            topicSelect.value = 'Интенсив ЕГЭ';
+        });
+
+        // Обработчики для кнопок "Связаться" и "Пробный урок"
+        function setTrialLesson() {
+            topicSelect.value = 'Пробный урок';
+        }
+        
+        document.getElementById('btnNavContact').addEventListener('click', setTrialLesson);
+        document.getElementById('btnBurgerContact').addEventListener('click', setTrialLesson);
+        document.getElementById('btnHeroTrial').addEventListener('click', setTrialLesson);
+
+
         // Отправка формы в Telegram
         document.getElementById('telegramForm').addEventListener('submit', function(e) {
             e.preventDefault();
@@ -915,8 +964,9 @@
 
             const name = this.querySelector('input[name="name"]').value;
             const phone = this.querySelector('input[name="phone"]').value;
+            const topic = this.querySelector('select[name="topic"]').value;
             
-            const message = `<b>Новая заявка с сайта!</b>\n\n👤 Имя: ${name}\n📱 Контакт: ${phone}`;
+            const message = `<b>Новая заявка с сайта!</b>\n\n👤 Имя: ${name}\n📱 Контакт: ${phone}\n🎯 Цель: ${topic}`;
             
             fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
                 method: 'POST',
